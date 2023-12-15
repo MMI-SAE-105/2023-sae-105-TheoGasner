@@ -8,88 +8,145 @@
     <link rel=stylesheet href="src/css/style.css">
     <script defer src="https://unpkg.com/alpinejs"></script>
     <style>
-        .timeline {
+        /* Style général de la frise */
+        .frise {
             position: relative;
+            width: 80%;
             margin: 0 auto;
-            padding: 0;
-            list-style: none;
-            z-index: 1;
         }
     
-        .timeline:before {
+        /* Ligne verticale au centre */
+        .frise::after {
             content: '';
             position: absolute;
+            width: 4px;
+            background-color: #333;
             top: 0;
             bottom: 0;
             left: 50%;
-            width: 2px;
-            background-color: #000;
-            transform: translateX(-50%);
+            margin-left: -2px;
         }
     
-        .timeline li {
+        /* Conteneur pour chaque événement */
+        .evenement {
+            padding: 10px 40px;
             position: relative;
-            margin: 50px 0;
-            padding-left: 50px;
-            z-index: 1;
+            width: 50%;
         }
     
-        .timeline li:before {
+        /* Cercle sur la ligne */
+        .evenement::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -10px;
             width: 20px;
             height: 20px;
+            right: -10px;
+            background-color: #333;
+            border: 4px solid #fff;
+            top: 15px;
             border-radius: 50%;
-            background-color: #fff;
-            border: 2px solid #000;
-            z-index: 2;
+            z-index: 1;
         }
     
-        .timeline li img {
-            position: absolute;
-            top: 0;
+        /* Conteneur à gauche */
+        .gauche {
             left: 0;
-            width: 50px;
-            height: 50px;
+        }
+    
+        /* Conteneur à droite */
+        .droite {
+            left: 50%;
+        }
+    
+        /* Flèche à gauche (pointant vers la droite) */
+        .gauche::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #fff;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #333;
+        }
+    
+        /* Flèche à droite (pointant vers la gauche) */
+        .droite::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #fff;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #333 transparent transparent;
+        }
+    
+        /* Correction du cercle pour les conteneurs à droite */
+        .droite::after {
+            left: -16px;
+        }
+    
+        /* Contenu de chaque événement */
+        .contenu {
+            padding: 20px 30px;
+            background-color: #fff;
+            position: relative;
+            border-radius: 6px;
+        }
+    
+        /* Image de chaque événement */
+        .image {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
             border-radius: 50%;
-            z-index: 3;
         }
     
-        .timeline li h3 {
-            margin-top: 0;
-            font-size: 18px;
-            font-weight: normal;
-            z-index: 1;
-        }
-    
-        .timeline li p {
+        /* Titre de chaque événement */
+        .titre {
             margin: 0;
-            z-index: 1;
+            font-weight: bold;
         }
     
-        .timeline li:nth-child(even) {
-            text-align: right;
-        }
+        /* Media queries - Frise responsive sur les écrans de moins de 600px de large */
+        @media screen and (max-width: 600px) {
     
-        .timeline li:nth-child(even) h3 {
-            margin-right: 50px;
-        }
+            /* Place la frise à gauche */
+            .frise::after {
+                left: 31px;
+            }
     
-        .timeline li:nth-child(even) img {
-            left: auto;
-            right: 0;
-        }
+            /* Conteneurs en pleine largeur */
+            .evenement {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
     
-        .timeline li:nth-child(3) img {
-            width: 100%;
-            height: auto;
-        }
+            /* Flèches pointant vers la gauche */
+            .evenement::before {
+                left: 60px;
+                border: medium solid #fff;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #333 transparent transparent;
+            }
     
-        .timeline li:nth-child(3) h3 {
-            margin-top: 20px;
+            /* Cercles au même endroit */
+            .gauche::after,
+            .droite::after {
+                left: 15px;
+            }
+    
+            /* Conteneurs à droite comme ceux à gauche */
+            .droite {
+                left: 0%;
+            }
         }
     </style>
 
@@ -146,43 +203,59 @@
         </div>
     </header>
 
-    <ul class="timeline">
-        <li>
-            <img src="public/img/maison-u-house.webp" alt="White U house">
-            <h3>1970</h3>
-            <p>White U house</p>
-        </li>
-        <li>
-            <img src="public/img/silver-hut.webp" alt="Silver Hut">
-            <h3>1980</h3>
-            <p>Silver Hut</p>
-        </li>
-        <li>
-            <img src="public/img/yatsushiro-m-tomio-ohashi.webp" alt="yatsushiro municipal museum">
-            <h3>1990</h3>
-            <p>yatsushiro municipal museum</p>
-        </li>
-        <li>
-            <img src="public/img/sendai-mediatheque-19.webp" alt="Sendai Mediatheque">
-            <h3>2000</h3>
-            <p>Sendai Mediatheque</p>
-        </li>
-        <li>
-            <img src="public/img/tama-art-university-library-1030x685.webp" alt="Tama Art University Library">
-            <h3>2005</h3>
-            <p>Tama Art University Library</p>
-        </li>
-        <li>
-            <img src="public/img/toyo-ito-museum.webp" alt="Toyo Ito Museum">
-            <h3>2010</h3>
-            <p>Toyo Ito Museum of Architecture</p>
-        </li>
-        <li>
-            <img src="public/img/sendai-mediatheque-19.webp" alt="Minna no Mori">
-            <h3>2015</h3>
-            <p>Minna no Mori</p>
-        </li>
-    </ul>
+
+
+    <div class="frise">
+        <div class="evenement gauche">
+            <div class="contenu">
+                <img src="public/img/maison-u-house.webp" alt="White House" class="image">
+                <h3 class="titre">1970</h3>
+                <p>White House</p>
+            </div>
+        </div>
+        <div class="evenement droite">
+            <div class="contenu">
+                <img src="public/img/silver-hut.webp" alt="Silver Hut" class="image">
+                <h3 class="titre">1980</h3>
+                <p>Silver Hut</p>
+            </div>
+        </div>
+        <div class="evenement gauche">
+            <div class="contenu">
+                <img src="public/img/yatsushiro-m-tomio-ohashi.webp" alt="yatsushiro municipal museum" class="image">
+                <h3 class="titre">1990</h3>
+                <p>yatsushiro municipal museum</p>
+            </div>
+        </div>
+        <div class="evenement droite">
+            <div class="contenu">
+                <img src="public/img/sendai-mediatheque-19.webp" alt="Sendai Mediatheque" class="image">
+                <h3 class="titre">2000</h3>
+                <p>Sendai Mediatheque</p>
+            </div>
+        </div>
+        <div class="evenement gauche">
+            <div class="contenu">
+                <img src="public/img/tama-art-university-library-1030x685.webp" alt="Tama Art University Library" class="image">
+                <h3 class="titre">2005</h3>
+                <p>Tama Art University Library</p>
+            </div>
+        </div>
+        <div class="evenement droite">
+            <div class="contenu">
+                <img src="public/img/toyo-ito-museum.webp" class="image">
+                <h3 class="titre">2010</h3>
+                <p>Toyo Ito Museum of Architecture</p>
+            </div>
+        </div>
+        <div class="evenement gauche">
+            <div class="contenu">
+                <img src="public/img/minna-no-mori.webp" alt="Minna no Mori" class="image">
+                <h3 class="titre">2015</h3>
+                <p>Minna no Mori</p>
+            </div>
+        </div>
+    </div>
 
 <footer class="custom-footer">
     <div class="separator"></div>
