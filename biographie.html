@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{menuIsOpen:false}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel=stylesheet href="src/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
+
 <body>
-    
+    <header>
+        <img class="logo" src="public/img/ExpoIto.svg" alt="Logo">
+        <img src="public/img/Menu_hamburger_ouvert.svg" alt="icone Menu hamburger" aria-controls="mainNav"
+            @click="menuIsOpen = ! menuIsOpen" x-show=" ! menuIsOpen" x-transition:leave-end.delay.200ms
+            x-transition:enter.delay.200ms>
+        <div class="menu-nav" id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms.transition>
+
+            <div class="icon-croix">
+                <img src="/public/img/croix.svg" alt="logo croix" @click="menuIsOpen = ! menuIsOpen">
+            </div>
+            <div class="nav-list">
+                <nav>
+                    <ul>
+                        <li class="item-nav">
+                            <a href="/">Page d'accueil</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
+                            <a href="architecture-vivocity.html">VivoCity</a>
+                            <a href="architecture2.html">Tods Omotesando Tokyo</a>
+                            <a href="architecture3.html">Le stade national de Kaohsiung</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
+                            <a href="biographie.html">Biographie Toyo Ito</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
+                            <a href="livre.html">Livres</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
+                            <a href="frise.html">Frise chronologique</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
+                            <a href="contact.html">Nous contacter</a>
+                            <div class="separateur"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+<footer class="custom-footer">
+    <div class="separator"></div>
+    <div class="h3_footer">
+        <h3>Contact</h3>
+        <h3>Billeterie</h3>
+    </div>
+    <div class="separator"></div>
+    <div class="h4_footer">
+        <h4>Théo GASNER</h4>
+        <h4>Groupe C1</h4>
+        <h4>gasnertheo@gmail.com</h4>
+    </div>
+    <div class="separator"></div>
+    <p class="paragraphe_footer">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département
+        MMI Montbéliard</p>
+    <img class="logo_footer" src="public/img/logo_mmi.png" alt="Votre image">
+</footer>
+
 </body>
+
 </html>
