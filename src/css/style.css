@@ -217,3 +217,12 @@ footer {
     display: flex;
     margin-top: 20px;
 }
+
+.container-left {
+    width: 123px;
+    height: 161px;
+    margin-left: 20px;
+    background-color: #F0B27A;
+    text-align: center;
+    padding-top: 50px
+}
