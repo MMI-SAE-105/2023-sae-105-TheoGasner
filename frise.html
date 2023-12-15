@@ -7,6 +7,82 @@
     <title>Document</title>
     <link rel=stylesheet href="src/css/style.css">
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            z-index: 1;
+        }
+    
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #000;
+            transform: translateX(-50%);
+        }
+    
+        .timeline li {
+            position: relative;
+            margin: 50px 0;
+            padding-left: 50px;
+            z-index: 1;
+        }
+    
+        .timeline li:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #000;
+            z-index: 2;
+        }
+    
+        .timeline li img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            z-index: 3;
+        }
+    
+        .timeline li h3 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: normal;
+            z-index: 1;
+        }
+    
+        .timeline li p {
+            margin: 0;
+            z-index: 1;
+        }
+    
+        .timeline li:nth-child(even) {
+            text-align: right;
+        }
+    
+        .timeline li:nth-child(even) h3 {
+            margin-right: 50px;
+        }
+    
+        .timeline li:nth-child(even) img {
+            left: auto;
+            right: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,6 +135,30 @@
             </div>
         </div>
     </header>
+
+    <ul class="timeline">
+        <li>
+            <img src="public/img/" alt="White U house">
+            <h3>1970</h3>
+            <p>White U house</p>
+        </li>
+        <li>
+            <img src="https://i.imgur.com/7vK2VJN.jpg" alt="Silver Hut">
+            <h3>1980</h3>
+            <p>Silver Hut</p>
+        </li>
+        <li>
+            <img src="https://i.imgur.com/8wZyJ6q.jpg" alt="yatsushiro municipal museum">
+            <h3>1990</h3>
+            <p>yatsushiro municipal museum</p>
+        </li>
+        <li>
+            <img src="https://i.imgur.com/7vK2VJN.jpg" alt="Sendai Mediatheque">
+            <h3>2000</h3>
+            <p>Sendai Mediatheque</p>
+        </li>
+    </ul>
+
 <footer class="custom-footer">
     <div class="separator"></div>
     <div class="h3_footer">
