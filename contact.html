@@ -11,14 +11,13 @@
 
 <body>
     <header>
-        <img class="logo" src="public/img/ExpoIto.svg" alt="Logo">
-        <img src="public/img/Menu_hamburger_ouvert.svg" alt="icone Menu hamburger" aria-controls="mainNav"
+        <img src="public/img/ExpoIto.svg" alt="Logo">
+        <img src="public/img/Menu_hamburger_ouvert.svg" alt="Icone menu hamburger" aria-controls="mainNav"
             @click="menuIsOpen = ! menuIsOpen" x-show=" ! menuIsOpen" x-transition:leave-end.delay.200ms
             x-transition:enter.delay.200ms>
         <div class="menu-nav" id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms.transition>
-
             <div class="icon-croix">
-                <img src="/public/img/croix.svg" alt="logo croix" @click="menuIsOpen = ! menuIsOpen">
+                <img src="public/img/croix.svg" alt="Logo croix" @click=" menuIsopen = ! menuIsOpen">
             </div>
             <div class="nav-list">
                 <nav>
@@ -28,8 +27,14 @@
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="architecture-vivocity.html">VivoCity</a>
-                            <a href="architecture2.html">Tods Omotesando Tokyo</a>
+                            <a href="architecture1.html">Vivo City</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
+                            <a href="architecture2.html">Tods Omotesando</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
                             <a href="architecture3.html">Le stade national de Kaohsiung</a>
                             <div class="separateur"></div>
                         </li>
@@ -38,7 +43,7 @@
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="livre.html">Livres</a>
+                            <a href="livre.html">Livres de Toyo Ito</a>
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">

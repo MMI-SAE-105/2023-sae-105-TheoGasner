@@ -11,14 +11,13 @@
 
 <body>
     <header>
-        <img class="logo" src="public/img/ExpoIto.svg" alt="Logo">
-        <img src="public/img/Menu_hamburger_ouvert.svg" alt="icone Menu hamburger" aria-controls="mainNav"
+        <img src="public/img/ExpoIto.svg" alt="Logo">
+        <img src="public/img/Menu_hamburger_ouvert.svg" alt="Icone menu hamburger" aria-controls="mainNav"
             @click="menuIsOpen = ! menuIsOpen" x-show=" ! menuIsOpen" x-transition:leave-end.delay.200ms
             x-transition:enter.delay.200ms>
         <div class="menu-nav" id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms.transition>
-
             <div class="icon-croix">
-                <img src="/public/img/croix.svg" alt="logo croix" @click="menuIsOpen = ! menuIsOpen">
+                <img src="public/img/croix.svg" alt="Logo croix" @click=" menuIsopen = ! menuIsOpen">
             </div>
             <div class="nav-list">
                 <nav>
@@ -28,8 +27,14 @@
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="architecture-vivocity.html">VivoCity</a>
-                            <a href="architecture2.html">Tods Omotesando Tokyo</a>
+                            <a href="architecture1.html">Vivo City</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
+                            <a href="architecture2.html">Tods Omotesando</a>
+                            <div class="separateur"></div>
+                        </li>
+                        <li class="item-nav">
                             <a href="architecture3.html">Le stade national de Kaohsiung</a>
                             <div class="separateur"></div>
                         </li>
@@ -38,7 +43,7 @@
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="livre.html">Livres</a>
+                            <a href="livre.html">Livres de Toyo Ito</a>
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
@@ -54,6 +59,41 @@
             </div>
         </div>
     </header>
+
+    <h1 class="h1_page">VivoCity</h1>
+    <img class="img-center" src="public/img/image 15.webp" alt="image architecture">
+    <div class="p_center">
+        <p> Le Vivo City est un centre commercial qui défie les conventions, en proposant une architecture inspirée par la
+            mer,
+            innovante par la technologie, et intégrée dans la ville. Découvrez comment Toyo Ito a créé un lieu de détente,
+            de
+            loisir, et de culture, qui reflète sa vision du futur.
+        </p>
+    </div>
+    <div class="block_img_text">
+        <div class="container-left">
+            <h3>Un centre commercial inspiré par la mer</h3>
+        </div>
+    
+        <img src="public/img/image 16.webp" alt="">
+    </div>
+    <div class="p_center">
+    
+        <p>
+            Le Vivo City est situé au bord de l’eau, face à l’île de Sentosa. Toyo Ito s’est inspiré par la forme et le
+            mouvement de
+            la mer, pour créer un bâtiment qui évoque une vague géante. La façade est en verre et en métal, avec des courbes
+            et des
+            ondulations.
+    
+            Le toit est en partie végétalisé, et offre une vue panoramique sur le paysage. Le centre commercial est conçu
+            pour être
+            un lieu de détente et de loisir, avec des espaces ouverts, des terrasses, des fontaines, et des jardins
+        </p>
+    </div>
+    <img class="img-center" src="public/img/image 17.webp" alt="image architecture">
+    <h2 class="h2_center">Un centre commercial intégré dans la ville</h2>
+
 <footer class="custom-footer">
     <div class="separator"></div>
     <div class="h3_footer">
