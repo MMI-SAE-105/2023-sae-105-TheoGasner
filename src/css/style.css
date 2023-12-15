@@ -43,3 +43,9 @@ body {
     padding-top: 29px;
     color: #ffffff;
 }
+
+.scroll-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
