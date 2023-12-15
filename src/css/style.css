@@ -231,3 +231,55 @@ footer {
     text-align: center;
     margin-top: 32px;
 }
+
+.block-bio1 {
+    width: 220px;
+    height: 161px;
+    text-align: center;
+    margin-top: 73px;
+    display: block;
+    margin-left: 40px;
+    margin-right: auto;
+    background-color: #F0B27A;
+}
+
+.block-bio1 p {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.block-bio2 {
+    width: 220px;
+    height: 161px;
+    text-align: center;
+    display: block;
+    margin-top: -20px;
+    margin-left: 120px;
+    margin-right: auto;
+    background-color: #150B5A;
+}
+
+.block-bio2 p {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 50px;
+    color: #ffffff;
+}
+
+.block-bio3 {
+    width: 220px;
+    height: 161px;
+    text-align: center;
+    display: block;
+    margin-top: -15px;
+    margin-left: 40px;
+    margin-right: auto;
+    background-color: #F0B27A;
+}
+
+.block-bio3 p {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 50px;
+}
