@@ -133,3 +133,28 @@ body {
     padding-top: 80px;
     margin-left: 8px;
 }
+
+.composant {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.composant-2 {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.composant-3 {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
