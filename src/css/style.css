@@ -19,3 +19,10 @@ body {
     margin-right: 44px;
     font-size: 32px;
 }
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 36px;
+}
