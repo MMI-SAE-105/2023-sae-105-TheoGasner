@@ -301,11 +301,10 @@ footer {
      margin-right: auto;
 }
 
- .titre_contact {
-     font-size: 24px;
-     margin-bottom: 45px;
-     margin-left: 15px;
-     margin-top: 8px;
+.titre_contact {
+    font-size: 24px;
+    margin-left: 15px;
+    margin-top: 8px;
 }
 
 #prenom {
@@ -332,5 +331,10 @@ footer {
     margin-left: 15px;
 }
 
-
+.button-contact {
+    border: 1px solid #F0B27A;
+    background-color: #fff;
+    width: 172px;
+    height: 37px;
+}
 
