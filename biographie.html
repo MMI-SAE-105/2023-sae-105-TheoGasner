@@ -7,17 +7,77 @@
     <title>Document</title>
     <link rel=stylesheet href="src/css/style.css">
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>
+        {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .carrousel_parent-ecrans {
+            display: flex;
+            width: 100%;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            margin: 0%;
+        }
+
+        .carrousel_ecran {
+            width: 100%;
+            flex: none;
+            scroll-snap-align: start;
+            margin: 0%;
+        }
+
+        .carrousel_ecran figure {
+            margin: 0%;
+
+        }
+
+        .carrousel {
+            position: relative;
+        }
+
+        .carrousel_btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: none;
+            display: grid;
+            place-content: center;
+            color: var(--white);
+        }
+
+        .carrousel_btn-avant {
+            left: 0;
+            margin-left: 20px;
+        }
+
+        .carrousel_btn-apres {
+            right: 0;
+            margin-right: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <img src="public/img/ExpoIto.svg" alt="Logo">
-        <img src="public/img/Menu_hamburger_ouvert.svg" alt="Icone menu hamburger" aria-controls="mainNav"
+        <img class="logo" src="public/img/ExpoIto.svg" alt="Logo">
+        <img src="public/img/Menu_hamburger_ouvert.svg" alt="icone Menu hamburger" aria-controls="mainNav"
             @click="menuIsOpen = ! menuIsOpen" x-show=" ! menuIsOpen" x-transition:leave-end.delay.200ms
             x-transition:enter.delay.200ms>
         <div class="menu-nav" id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms.transition>
+
             <div class="icon-croix">
-                <img src="public/img/croix.svg" alt="Logo croix" @click=" menuIsopen = ! menuIsOpen">
+                <img src="/public/img/croix.svg" alt="logo croix" @click="menuIsOpen = ! menuIsOpen">
             </div>
             <div class="nav-list">
                 <nav>
@@ -27,31 +87,25 @@
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="architecture1.html">Vivo City</a>
-                            <div class="separateur"></div>
-                        </li>
-                        <li class="item-nav">
-                            <a href="architecture2.html">Tods Omotesando</a>
-                            <div class="separateur"></div>
-                        </li>
-                        <li class="item-nav">
+                            <a href="architecture-vivocity.html">VivoCity</a>
+                            <a href="architecture2.html">Tods Omotesando Tokyo</a>
                             <a href="architecture3.html">Le stade national de Kaohsiung</a>
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="biographie.html">Biographie Toyo Ito</a>
+                            <a href="/biographie.html">Biographie Toyo Ito</a>
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="livre.html">Livres de Toyo Ito</a>
+                            <a href="/livre.html">Livres</a>
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="frise.html">Frise chronologique</a>
+                            <a href="/frise.html">Frise chronologique</a>
                             <div class="separateur"></div>
                         </li>
                         <li class="item-nav">
-                            <a href="contact.html">Nous contacter</a>
+                            <a href="/contact.html">Nous contacter</a>
                             <div class="separateur"></div>
                         </li>
                     </ul>
@@ -60,62 +114,105 @@
         </div>
     </header>
 
-<h1 class="h1_page">Toyo Ito : l’architecture du futur</h1>
-<img class="img-center" src="public/img/Ellipse1.webp" alt="image architecture">
-<div class="block-bio1">
-    <p>Toyo Ito est un architecte japonais très renommé né en 1941 à Séoul. Il est connu pour son architecture
-        conceptuelle</p>
-</div>
-
-<div class="block-bio2">
-    <p>Il a reçu le prix Pritzker en 2013 pour son œuvre innovante et influente, qui explore les notions de ville
-        simulée et
-        d’architecture conceptuelle1</p>
-</div>
-
-<div class="block-bio3">
-    <p>Il a réalisé de nombreuses œuvres architecturales, comme la médiathèque de Sendai, le stade national de
-        Kaohsiung, ou la
-        tour de la BRI</p>
-</div>
-<img class="img-center_modif" src="public/img/image 18.webp" alt="Toyo Ito">
-<h2 class="h2_center">S’engager pour la société, harmoniser avec la nature</h2>
-
-<div class="p_center">
-
-    <p>
-        Les projets humanitaires et écologiques de Toyo Ito Après le tremblement de terre et le tsunami du 11 mars 2011
-        au
-        Japon, Toyo Ito s’engage dans des projets humanitaires, en collaboration avec d’autres architectes.
-
-        Il développe le concept de « Home-for-All », qui sont des espaces communs pour les survivants, construits avec
-        des
-        matériaux locaux et recyclés.
-
-        Il réalise aussi le stade national de Kaohsiung, qui est le premier stade au monde à être entièrement alimenté
-        par
-        l’énergie solaire.
-
-        Il cherche à créer une architecture qui soit en harmonie avec la nature et la société.
-</div>
-
-<footer class="custom-footer">
-    <div class="separator"></div>
-    <div class="h3_footer">
-        <h3>Contact</h3>
-        <h3>Billeterie</h3>
+    <h1 class="h1_page">Toyo Ito : l’architecture du futur</h1>
+    <img class="img-center" src="public/img/Ellipse1.webp" alt="image architecture">
+    <div class="block-bio1">
+        <p>Toyo Ito est un architecte japonais très renommé né en 1941 à Séoul. Il est connu pour son architecture
+            conceptuelle</p>
     </div>
-    <div class="separator"></div>
-    <div class="h4_footer">
-        <h4>Théo GASNER</h4>
-        <h4>Groupe C1</h4>
-        <h4>gasnertheo@gmail.com</h4>
+
+    <div class="block-bio2">
+        <p>Il a reçu le prix Pritzker en 2013 pour son œuvre innovante et influente, qui explore les notions de ville
+            simulée et
+            d’architecture conceptuelle1</p>
     </div>
-    <div class="separator"></div>
-    <p class="paragraphe_footer">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département
-        MMI Montbéliard</p>
-    <img class="logo_footer" src="public/img/logo_mmi.png" alt="Votre image">
-</footer>
+
+    <div class="block-bio3">
+        <p>Il a réalisé de nombreuses œuvres architecturales, comme la médiathèque de Sendai, le stade national de
+            Kaohsiung, ou la
+            tour de la BRI</p>
+    </div>
+    <img class="img-center_modif" src="public/img/image 18.webp" alt="Toyo Ito">
+    <h2 class="h2_center">S’engager pour la société, harmoniser avec la nature</h2>
+
+    <div class="p_center">
+
+        <p>
+            Les projets humanitaires et écologiques de Toyo Ito Après le tremblement de terre et le tsunami du 11 mars
+            2011 au
+            Japon, Toyo Ito s’engage dans des projets humanitaires, en collaboration avec d’autres architectes.
+
+            Il développe le concept de « Home-for-All », qui sont des espaces communs pour les survivants, construits
+            avec des
+            matériaux locaux et recyclés.
+
+            Il réalise aussi le stade national de Kaohsiung, qui est le premier stade au monde à être entièrement
+            alimenté par
+            l’énergie solaire.
+
+            Il cherche à créer une architecture qui soit en harmonie avec la nature et la société.
+    </div>
+
+
+    <h3 class="sous_titres_homepage">Oeuvres au programmes</h3>
+    <div class="carrousel" x-data="{}">
+        <div class="carrousel" x-data="{}">
+            <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"
+                class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant"> &lt; </button>
+            <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"
+                class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant"> > </button>
+            <div class="carrousel_parent-ecrans" x-ref="parent">
+                <div class="carrousel_ecran">
+                    <figure>
+                        <img class="img_carrousel" src="public/img/sendai-mediatheque-19.webp" alt="Sendai mediatheque">
+                    </figure>
+                </div>
+                <div class="carrousel_ecran">
+                    <figure>
+                        <img class="img_carrousel" src="public/img/tour-de-verre-toyo-ito.webp" alt="tour de verre">
+                    </figure>
+                </div>
+                <div class="carrousel_ecran">
+                    <figure>
+                        <img class="img_carrousel" src="public/img/musée-yastushiro.webp" alt="Musée yastushiro">
+                    </figure>
+                </div>
+                <div class="carrousel_ecran">
+                    <figure>
+                        <img class="img_carrousel" src="public/img/pavillon-serpentine.webp" alt="pavillon serpentine">
+                    </figure>
+                </div>
+                <div class="carrousel_ecran">
+                    <figure>
+                        <img class="img_carrousel" src="public/img/VivoCity.webp" alt="Vivo City">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="custom-footer">
+        <div class="separator"></div>
+        <div class="h3_footer">
+            <h3>Contact</h3>
+            <h3>Billeterie</h3>
+        </div>
+        <div class="separator"></div>
+        <div class="h4_footer">
+            <h4>Théo GASNER</h4>
+            <h4>Groupe C1</h4>
+            <h4>gasnertheo@gmail.com</h4>
+        </div>
+        <div class="separator"></div>
+        <p class="paragraphe_footer">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au
+            département MMI Montbéliard</p>
+        <img class="logo_footer" src="public/img/logo_mmi.png" alt="logo mmi">
+    </footer>
 
 </body>
 
