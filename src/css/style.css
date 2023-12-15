@@ -108,3 +108,14 @@ body {
     padding-top: 30px;
     margin-left: 8px;
 }
+
+.container-info {
+    width: 320px;
+    height: 242px;
+    background-color: #F0B27A;
+    text-align: center;
+    margin-top: 73px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
