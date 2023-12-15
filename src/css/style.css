@@ -291,26 +291,3 @@ footer {
     margin-top: -10px;
 }
 
-#prenom {
-    border: 1px solid #F0B27A;
-    margin-bottom: 48px;
-    margin-left: 15px;
-}
-
-#nom {
-    border: 1px solid #F0B27A;
-    margin-bottom: 48px;
-    margin-left: 15px;
-}
-
-#mail {
-    border: 1px solid #F0B27A;
-    margin-bottom: 48px;
-    margin-left: 15px;
-}
-
-#msg {
-    border: 1px solid #F0B27A;
-    margin-bottom: 48px;
-    margin-left: 15px;
-}
