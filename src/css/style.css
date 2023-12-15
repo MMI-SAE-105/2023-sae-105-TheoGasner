@@ -119,3 +119,17 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.info_tarif {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -25px;
+    width: 320px;
+    weight: 243px;
+    background-color: #F0B27A;
+}
+
+.info_tarif p {
+    padding-top: 80px;
+    margin-left: 8px;
+}
