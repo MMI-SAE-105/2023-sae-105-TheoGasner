@@ -11,8 +11,14 @@
     <header>
         <img src="public/img/ExpoIto.svg" alt="Logo">
         <img src="public/img/Menu_hamburger_ouvert.svg" alt="Icone menu hamburger" aria-controls="mainNav"
-        @click="menuIsOpen = ! menuIsOpen" x-show=" ! menuIsOpen" x-transition:leave-end.delay.200ms
-        x-transition:enter.delay.200ms>
+            @click="menuIsOpen = ! menuIsOpen" x-show=" ! menuIsOpen" x-transition:leave-end.delay.200ms
+            x-transition:enter.delay.200ms>
+        <div class="menu-nav" id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms.transition>
+            <div class="icon-croix">
+                <img src="public/img/croix.svg" alt="Logo croix" @click=" menuIsopen = ! menuIsOpen">
+                
+            </div>
+        </div>
     </header>
 </body>
 </html>
