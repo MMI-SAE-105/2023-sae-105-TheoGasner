@@ -291,3 +291,20 @@ footer {
     margin-top: -10px;
 }
 
+.container-contact {
+     margin-top: 48px;
+     width: 296px;
+     height: 700px;
+     border: 2px solid #F0B27A;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+ .titre_contact {
+     font-size: 24px;
+     margin-bottom: 45px;
+     margin-left: 15px;
+     margin-top: 8px;
+ }
+
