@@ -6,3 +6,16 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
+body {
+    background-color: #e3e3e3;
+}
+
+.h1_page {
+    text-align: center;
+    margin-top: 20px;
+    width: 288px;
+    margin-left: 44px;
+    margin-right: 44px;
+    font-size: 32px;
+}
