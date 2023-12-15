@@ -86,3 +86,14 @@ body {
     margin-right: 15px;
 }
 
+.info_lieu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.info_lieu p {
+
+    padding-top: 8px;
+    margin-left: 8px;
+}
