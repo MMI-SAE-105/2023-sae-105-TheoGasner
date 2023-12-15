@@ -73,3 +73,15 @@ body {
     margin-top: 20px;
     text-align: center;
 }
+
+.info_date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.info_date p {
+
+    padding-top: 18px;
+    margin-right: 15px;
+}
